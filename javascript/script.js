@@ -2,33 +2,25 @@
   const table  = document.getElementById('table');
   const  saveBtn = document.getElementById('saveBtn');
   const elements = {
-      nameTxt: document.getElementById('name'),
-      amountTxt: document.getElementById('amount'),
-      dateTxt: document.getElementById('date'),
-      typeTxt: document.getElementById('type'),
+      nameTxt: document.getElementById('name').value,
+      amountTxt: document.getElementById('amount').value,
+      dateTxt: document.getElementById('date').value,
+      typeTxt: document.getElementById('type').value,
   }
   
-
   function showValues(){
     const tableRow = document.createElement('tr');
     for (const i in elements){
-    
-    const tableCellName = document.createElement('td');
-    const tableCellType = document.createElement('td');
-    const tableCellAmout = document.createElement('td');
-    const tableCellDate = document.createElement('td');
+    const tableCellItem = document.createElement('td');
 
       // DOM 
-      tableRow.appendChild(tableCellName); 
-      tableRow.appendChild(tableCellType);
-      tableRow.appendChild(tableCellAmout);
-      tableRow.appendChild(tableCellDate);
+      tableRow.appendChild(tableCellItem); 
       table.appendChild(tableRow);
 
-      tableCellName.innerText = i.nameTxt;
-      tableCellType.innerText = i.typeTxt;
-      tableCellAmout.innerText = i.amountTxt;
-      tableCellDate.innerText = i.dateTxt; 
+      tableCellItem.innerText = i.nameTxt;
+      tableCellItem.innerText = i.typeTxt;
+      tableCellItem.innerText = i.amountTxt;
+      tableCellItem.innerText = i.dateTxt; 
 
       
     }
