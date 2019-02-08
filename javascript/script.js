@@ -1,19 +1,27 @@
 (function(){
   const table  = document.getElementById('table');
-  const  saveBtn = document.getElementById('saveBtn');
+  const saveBtn = document.getElementById('saveBtn');
+  const nameTxt = document.getElementById('name');
+  const dateTxt = document.getElementById('date');
+  const typeTxt = document.getElementById('type');
+  const amountTxt = document.getElementById('amount');
+  
   const elements = {
-      nameTxt: document.getElementById('name').value,
-      amountTxt: document.getElementById('amount').value,
-      dateTxt: document.getElementById('date').value,
-      typeTxt: document.getElementById('type').value,
+    name : nameTxt.value,
+    date : dateTxt.value,
+    amoun: amountTxt.value,
+    type : typeTxt.value
   }
   
-  function showValues(){
+  function showValues(){  
+    
+    console.log(elements);
     const tableRow = document.createElement('tr');
     for (const i in elements){
     const tableCellItem = document.createElement('td');
 
       // DOM 
+      
       tableRow.appendChild(tableCellItem); 
       table.appendChild(tableRow);
 
